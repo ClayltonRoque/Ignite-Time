@@ -4,8 +4,9 @@ import { formatDistanceToNow } from 'date-fns'
 import { CyclesContext } from "../../context/CyclesContext";
 import ptBR from 'date-fns/esm/locale/pt-BR/index.js'
 
+
 export function History() {
-    const { cycles } = useContext(CyclesContext)
+    const { cycles }  = useContext(CyclesContext)
 
     return  (
         <HistoryContainer>

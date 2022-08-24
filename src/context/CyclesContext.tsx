@@ -9,7 +9,7 @@ interface CreateCycleData {
 }
 
 interface CyclesContextType {
-    cycles?: Cycle[]
+    cycles: Cycle[]
     activeCycle: Cycle | undefined
     activeCycleId: string | null
     amountSecondsPassed: number
