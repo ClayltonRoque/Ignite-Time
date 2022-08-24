@@ -55,10 +55,9 @@ export function CyclesContextProvider({
       } else {
         return  {
           cycles: [],
-          activeCycleId: null,
-        }
+          activeCycleId: null,}
       }
-    },
+      }
   )
 
   const { cycles = [], activeCycleId } = cyclesState
