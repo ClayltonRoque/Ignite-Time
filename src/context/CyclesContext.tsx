@@ -9,7 +9,7 @@ interface CreateCycleData {
 }
 
 interface CyclesContextType {
-    cycles: Cycle[] | undefined
+    cycles: Cycle[] 
     activeCycle: Cycle | undefined
     activeCycleId: string | null
     amountSecondsPassed: number
@@ -26,7 +26,7 @@ interface CyclesContextProviderProps {
 }
 
 
-export function CyclesContextProvider({ children, } : CyclesContextProviderProps) {
+export function CyclesContextProvider({ children } : CyclesContextProviderProps) {
     
     const [cyclesState, dispatch] = useReducer(
         cyclesReducer, 
@@ -43,7 +43,7 @@ export function CyclesContextProvider({ children, } : CyclesContextProviderProps
         }
         )
         
-    const {cycles,activeCycleId} = cyclesState
+    const {cycles = [], activeCycleId} = cyclesState
    
 
     const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
@@ -97,8 +97,8 @@ export function CyclesContextProvider({ children, } : CyclesContextProviderProps
         cycles,   
         activeCycle, 
         activeCycleId,       
-        amountSecondsPassed,
         markCurrentCycleAsFinished,
+        amountSecondsPassed,
         setSecondsPassed,
         createNewCycle,
         interruptCurrentCycle}}>
