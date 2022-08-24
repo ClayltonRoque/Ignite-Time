@@ -42,8 +42,10 @@ export function CyclesContextProvider({ children } : CyclesContextProviderProps)
             }
         }
         )
-        
-    const {cycles = [], activeCycleId} = cyclesState
+    console.log(cyclesState)
+    debugger;    
+    const {cycles, activeCycleId} = cyclesState
+    debugger;
    
 
     const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
