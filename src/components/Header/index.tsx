@@ -3,11 +3,10 @@ import { Timer, Scroll } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
 
 
-
 export function Header() {
     return (
         <HeaderContainer>
-            <img src='../../../dist/assets/logo.svg' alt="" />
+            <img src='/assets/Logo.svg' alt="" />
             <nav>
                 <NavLink to="/">
                     <Timer size={24} />
@@ -20,7 +19,3 @@ export function Header() {
     )
 }
 
-// import React from 'react'
-// import imgagemEscolhida from 'endereco-da-imagem'
-
-// export default () => <img src={imgagemEscolhida}/>
