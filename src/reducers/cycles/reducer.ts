@@ -25,9 +25,12 @@ export function cyclesReducer (state: CyclesState, action: any)
                 activeCycleId: action.payload.newCycle.id,
             } 
             // return produce(state, (draft) => {
+               
             //     draft.cycles.push(action.payload.newCycle)
             //     draft.activeCycleId = action.payload.newCycle.Id
+            //     console.log(state, draft)
             // })
+
         case ActionTypes.INTERRUPT_CURRENT_CYCLE: {
             // return {
             //     ...state,
