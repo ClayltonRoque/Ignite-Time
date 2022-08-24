@@ -4,7 +4,6 @@ import { formatDistanceToNow } from 'date-fns'
 import { CyclesContext } from "../../context/CyclesContext";
 import ptBR from 'date-fns/esm/locale/pt-BR/index.js'
 
-
 export function History() {
     const { cycles }  = useContext(CyclesContext)
 
@@ -35,15 +34,12 @@ export function History() {
                                     {cycle.finishedDate && (
                                         <Status statusColor='green'>Concluído</Status>
                                     )}
-
                                     {cycle.interruptedDate && (
                                         <Status statusColor='red'>Interrompido</Status>
                                     )}
-
                                     {!cycle.finishedDate && !cycle.interruptedDate && (
                                         <Status statusColor='yellow'>Em andamento</Status>
-                                    )}
-                                    
+                                    )}         
                                 </td>
                             </tr>
                         )

@@ -1,17 +1,6 @@
 import { differenceInSeconds } from 'date-fns'
-import {
-  createContext,
-  ReactNode,
-  useEffect,
-  useReducer,
-  useState,
-} from 'react'
-import {
-  ActionTypes,
-  addNewCycleAction,
-  interruptCurrentCycleAction,
-  markCurrentCycleAsFinishedAction,
-} from '../reducers/cycles/actions'
+import { createContext,ReactNode, useEffect, useReducer, useState } from 'react'
+import { addNewCycleAction, interruptCurrentCycleAction, markCurrentCycleAsFinishedAction } from '../reducers/cycles/actions'
 import { Cycle, cyclesReducer } from '../reducers/cycles/reducer'
 
 interface CreateCycleData {
@@ -36,9 +25,7 @@ interface CyclesContextProviderProps {
   children: ReactNode
 }
 
-export function CyclesContextProvider({
-  children,
-}: CyclesContextProviderProps) {
+export function CyclesContextProvider({children}: CyclesContextProviderProps) {
   const [cyclesState, dispatch] = useReducer(
     cyclesReducer,
     {
@@ -110,13 +97,11 @@ export function CyclesContextProvider({
         cycles,
         activeCycle,
         activeCycleId,
-        markCurrentCycleAsFinished,
         amountSecondsPassed,
+        markCurrentCycleAsFinished,
         setSecondsPassed,
         createNewCycle,
-        interruptCurrentCycle,
-      }}
-    >
+        interruptCurrentCycle,}}>
       {children}
     </CyclesContext.Provider>
   )

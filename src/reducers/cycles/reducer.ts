@@ -24,25 +24,9 @@ export function cyclesReducer (state: CyclesState, action: any)
                 cycles: [...state.cycles, action.payload.newCycle],
                 activeCycleId: action.payload.newCycle.id,
             } 
-            // return produce(state, (draft) => {
-               
-            //     draft.cycles.push(action.payload.newCycle)
-            //     draft.activeCycleId = action.payload.newCycle.Id
-            //     console.log(state, draft)
-            // })
-
+        
         case ActionTypes.INTERRUPT_CURRENT_CYCLE: {
-            // return {
-            //     ...state,
-            //     cycles:  state.cycles.map((cycle) => {
-            //         if (cycle.id == state.activeCycleId) {
-            //             return { ...cycle, interruptedDate: new Date() }
-            //         } else { 
-            //             return cycle
-            //         }
-            //     }),
-            //     activeCycleId: null,    
-            // }
+       
             const currentCycleIndex = state.cycles.findIndex((cycle) =>{
                 return cycle.id === state.activeCycleId
             })
@@ -57,18 +41,7 @@ export function cyclesReducer (state: CyclesState, action: any)
             })
         }
         case ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED: {
-            // return {
-            //     ...state,
-            //     cycles:  state.cycles.map((cycle) => {
-            //         if (cycle.id == state.activeCycleId) {
-            //             return { ...cycle, finishedDate: new Date() }
-            //         } else { 
-            //             return cycle
-            //         }
-            //     }),
-            //     activeCycleId: null,    
-            // }
-
+        
             const currentCycleIndex = state.cycles.findIndex((cycle) =>{
                 return cycle.id === state.activeCycleId
             })
