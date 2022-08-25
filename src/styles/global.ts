@@ -24,4 +24,40 @@ body, input, textarea, button {
     font-size: 1rem;
 
 }
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 1250px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+ 
+@media (max-width: 1000px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 750px) {
+    html {
+        font-size: 52.5%;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+@media (max-width: 350px) {
+    html {
+        font-size: 25%;
+    }
+}
 `
