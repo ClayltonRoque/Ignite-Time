@@ -20,7 +20,7 @@ export const HistoryList = styled.div `
     table {
         width: 100%;
         border-collapse: collapse;
-        min-width: 600px;
+        min-width: 50rem;
 
         th {
             background-color: ${(props) => props.theme['gray-600']};
